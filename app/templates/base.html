@@ -16,6 +16,8 @@
 	    	<!-- Custom styles for this template -->
 	    		<link href="{{url_for('static', 
 	    		filename='css/sticky-footer-navbar/sticky-footer-navbar.css')}}" rel="stylesheet">
+	    		<link href="{{url_for('static', 
+	    		filename='css/narrow-jumbotron.css')}}" rel="stylesheet">
 
 	    	<!-- Favicons -->
 			<link rel="apple-touch-icon" 
@@ -74,12 +76,14 @@
 {% endblock %}
  
 {% block content %}
+    <div class="d-flex flex-column  align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+
+
 
 	<div class="container d-flex flex-column h-100">
     		<header>
   		<!-- Fixed navbar -->
-  			<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-  			<!--<a class="navbar-brand" href="#">Fixed navbar</a> -->
+  			<<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
     				<a class="navbar-brand" href="/">
 					<img class="img-responsive mx-auto" 
 					src="{{url_for('static', filename='assets/img/logo.png')}}" 
@@ -108,7 +112,28 @@
 				      	</form>-->
     				</div>
   			</nav>
+  			
+  			<!--div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  
+  <nav class="my-2 my-md-0 mr-md-3 fixed-top">
+  <a class="navbar-brand" href="/">
+					<img class="img-responsive mx-auto" 
+					src="{{url_for('static', filename='assets/img/logo.png')}}" 
+					alt="" style="width:132; height:58">
+	</a>
+    <a class="p-2 text-dark" href="#">Features</a>
+    <a class="p-2 text-dark" href="#">Enterprise</a>
+    <a class="p-2 text-dark" href="#">Support</a>
+    <a class="p-2 text-dark" href="#">Pricing</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div-->
+
 		</header>
+		
+		</div>
+
+
 
 	{% block page_content %}
 	
