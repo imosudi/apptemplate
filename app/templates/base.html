@@ -71,6 +71,9 @@
 		<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 		<script src="{{url_for('static', filename='js/docs.min.js')}}"></script>
 
+{{ moment.include_moment() }}
+
+
 	{% endblock %}
 
 {% endblock %}
