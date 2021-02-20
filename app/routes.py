@@ -14,7 +14,8 @@ from app.models import *
 # Home Page
 @app.route('/')
 def home():
-    return render_template('index.html', current_time=datetime.utcnow())
+    pageName = '/'
+    return render_template('index.html', pageName=pageName, current_time=datetime.utcnow())
     
 
 # User login
@@ -37,4 +38,7 @@ def register():
 # About App Page
 @app.route('/about')
 def about():
-    return render_template('about.html', current_time=datetime.utcnow())
+    pageName = 'about'
+    return render_template('about.html', pageName=pageName, current_time=datetime.utcnow())
+    
+    
