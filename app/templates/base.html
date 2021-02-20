@@ -4,20 +4,44 @@
     	<meta name="description" content="">
     	<meta name="author" content="Mosudi Isiaka, and Bootstrap contributors">
 	<meta name="generator" content="Jekyll v4.1.1">
-    	<meta name="msapplication-config" content="{{url_for('static', filename='assets/img/favicons/browserconfig.xml')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="msapplication-config" content="{{url_for('static', 
+    	filename='assets/img/favicons/browserconfig.xml')}}">
 	<meta name="theme-color" content="#563d7c">
-    	<title> Flask WebApp Bootstrap4 Template </title>
+    	<title> Flask WebApp Bootstrap5 Template </title>
 
 	{% block styles %}
 
+	    	
+	    	
 	    	<!-- Bootstrap core CSS -->
 			<link href="{{url_for('static', 
 			filename='css/bootstrap.min.css')}}" rel="stylesheet" >
-	    	<!-- Custom styles for this template -->
+			<link href="{{url_for('static', 
+	    		filename='css/narrow-jumbotron.css')}}" rel="stylesheet">
+	    		
+		<style>
+	      		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+	      		}
+
+	      		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+			font-size: 3.5rem;
+			}
+	      		}
+	    	</style>
+
+    
+    <<!-- Custom styles for this template -->
 	    		<link href="{{url_for('static', 
 	    		filename='css/sticky-footer-navbar/sticky-footer-navbar.css')}}" rel="stylesheet">
-	    		<link href="{{url_for('static', 
-	    		filename='css/narrow-jumbotron.css')}}" rel="stylesheet">
+	    		
+	    		
 
 	    	<!-- Favicons -->
 			<link rel="apple-touch-icon" 
@@ -39,22 +63,7 @@
 				href="{{url_for('static', 
 				filename='assets/img/favicons/favicon.ico')}}">
 		
-		    <style>
-			      .bd-placeholder-img {
-				font-size: 1.125rem;
-				text-anchor: middle;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			      }
 
-			      @media (min-width: 768px) {
-				.bd-placeholder-img-lg {
-				  font-size: 3.5rem;
-				}
-			      }
-		    </style>
 	 
 	{% endblock %}
 
@@ -62,13 +71,11 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" 			integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" 		crossorigin="anonymous">
 		</script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-		<script>window.jQuery || document.write('<script src="{{url_for('static', filename='js/query.slim.min.js')}}">
-		<\/script>')
-		</script>
-		<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
-		<script src="{{url_for('static', filename='js/docs.min.js')}}"></script>
+		<script class="jsbin" 
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" 
+		src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>		
 
 
 
@@ -80,14 +87,13 @@
 {% endblock %}
  
 {% block content %}
-
 <div class="d-flex flex-column  align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <!--div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"> -->
 
-	<div class="container d-flex flex-column h-100">
+	<!--div class="container d-flex flex-column h-100"-->
 		<header>
   		<!-- Fixed navbar -->
-  			<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  			<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
     				<a class="navbar-brand" href="/">
 				<img class="img-responsive mx-auto" 
 				src="{{url_for('static', filename='assets/img/logo.png')}}" 
@@ -102,11 +108,11 @@
     	 			aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle 					navigation" data-bs-target="#navbarCollapse"   >
         			<span class="navbar-toggler-icon"></span>
       				</button>
-    				<div class="collapse navbar-collapse" id="navbarCollapse">
-      					<ul class="nav nav-pills ml-auto">
+    				<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      					<ul class="nav nav-pills ml-auto gap-2 d-md-flex justify-content-md-middle">
 						<li class="nav-item active">
-						  	<a class="nav-link" href="/">
-						  		Home <span class="sr-only">(current)</span>
+						  	<a class="nav-link active" href="/">
+						  		Home <!--span class="sr-only">(current)</span-->
 						  	</a>
 						</li>
 						<li class="nav-item">
@@ -116,9 +122,12 @@
 							<a class="nav-link" href="/register">Registration</a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="/about">About</a>
+						</li>
+						<!--li class="nav-item">
 							<a class="nav-link " href="#" tabindex="-1" 
 							aria-disabled="true">Disabled</a>
-						</li>
+						</li-->
 					</ul>
 				      	<!--<form class="form-inline mt-2 mt-md-0">
 					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -128,7 +137,7 @@
   			</nav>
   			
 		</header>
-	</div>
+	<!--/div-->
 
 
 
