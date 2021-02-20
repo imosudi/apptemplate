@@ -31,3 +31,6 @@ class registrationForm(Form):
 class loginForm(Form):
     username = StringField( validators=[Required()])
     password = PasswordField( validators=[Required()])
+    
+
+
