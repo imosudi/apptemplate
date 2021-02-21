@@ -41,4 +41,12 @@ def about():
     pageName = 'about'
     return render_template('about.html', pageName=pageName, current_time=datetime.utcnow())
     
-    
+
+# Errors
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('errors/404.html', current_time=datetime.utcnow()), 404
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('errors/500.html', current_time=datetime.utcnow()), 500
